@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<title>心贝电台WebApp</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1.0,user-scalable=no" name="viewport"/>
+<style type="text/css">
+/* 公共样式 */
+::selection{background:#3168C3;color:#FFF;text-shadow:none;}/* scrollbar */
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}/* Track */
+::-webkit-scrollbar-thumb{-webkit-border-radius:10px;border-radius:10px;background:rgba(231,231,231,0.8);-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}/* Handle */
+::-webkit-scrollbar-thumb:window-inactive{background:rgba(231,231,231,0.4);}
+*{-webkit-tap-highlight-color:rgba(0,0,0,0);outline:none;-webkit-border-radius:0;}
+html,body{width:100%;height:100%;overflow:hidden;}
+body{margin:0;padding:0;padding-top:50px;background:url(fm/images/demo_bg.jpg) center no-repeat;/*background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #999), color-stop(1, #ccc));background:-webkit-gradient(linear, 0 0, 0 bottom, from(#353064), to(#4F2A62));background:#F8F6F7;*/background-size:100% 100%;}
+ul{margin:0;}
+li{list-style-type:none;}
+hr{border:none;border-top:1px solid #DEDEDE;}
+#mobile_bg{margin:10px auto;width:380px;height:700px;background:url(fm/images/iphone.png) no-repeat;background-size:100%;padding-top:134px;}
+#mobile{width:324px;margin-left:30px;background:#fff;overflow:auto;overflow-x:hidden;}
+/* 小标题头 */
+.title{padding-left:10px;height:30px;line-height:30px;background:#CCCCCC;color:#FFFFFF;border-bottom:1px solid #A6A5AA;font-size:12px;}
+/* 图片 */
+.img{padding:10px;font-size:10px;color:#999;text-align:left;line-height:1.5em;border-bottom:1px solid #F1F1F1;}
+.img img{float:left;margin-right:10px;}
+/* 普通文字 */
+.txt{font-size:10px;line-height:1.8em;padding:10px;}
+.txt p{margin:0;color:#555;margin-bottom:5px;}
+.txt p span{color:#999;margin-right:10px;text-align:right;display:inline-block;width:60px;}
+.history p{color:#008B00;}
+.history i{color:#999;/*font-style:normal;color:#00f;text-decoration:underline;*/}
+/* 表单 */
+.caption{font-size:13px;color:#666;height:20px;line-height:20px;padding:5px 10px;margin-top:10px;}
+form{display:-webkit-flex;flex-flow:column;}
+form ul{-webkit-flex:1;border:1px solid #F1F1F1;padding:10px;margin:0;background:#fff;border-left:none;border-right:none;}
+form li{margin:5px 0;}
+form li label{width:40px;height:24px;line-height:24px;font-size:14px;color:#000;font-weight:bold;overflow:hidden;}
+form li input{width:220px;height:22px;line-height:20px;border:none;margin-left:10px;font-size:14px;color:#333;}
+form li input[type=date]{-webkit-appearance:none;display:block;float:right;}
+form textarea{-webkit-flex:1;height:60px;margin:10px;border:1px solid #C8C8CA;padding:5px;resize:none;}
+form textarea:focus{border:1px solid #288add;}
+.submit_li{text-align:-webkit-center;}
+.red{color:#f00;}
+/* 按钮*/
+.btn_blue{-webkit-appearance:none;display:block;height:34px;background:#007AFF;-webkit-border-radius:10px;color:#fff;line-height:34px;font-size:12px;text-decoration:none;}
+.btn_red{-webkit-appearance:none;display:block;height:34px;background:#FF2E55;-webkit-border-radius:10px;color:#fff;}
+.btn_green{-webkit-appearance:none;display:block;height:34px;background:#4CD966;-webkit-border-radius:10px;color:#fff;}
+.btn_yellow{-webkit-appearance:none;display:block;height:34px;background:#FFCC01;-webkit-border-radius:10px;color:#fff;}
+</style>
+</head>
+<body>
+<div id="mobile_bg">
+	<div id="mobile">
+		<iframe frameborder="0" scrolling="no" width="100%" height="550px" src="fm/index.html"></iframe>
+	</div>
+</div>
+</body>
+</html>

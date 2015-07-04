@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<title>首页</title>
+<link rel="stylesheet" href="f7/css/framework7.min.css"/>
+<link rel="stylesheet" href="app.css"/>
+<style type="text/css">
+.statusbar-overlay {
+    background: pink;
+}
+</style>
+</head>
+<body>
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<aside id="pannel-left" class="panel panel-left panel-reveal">
+	<div id="userinfo" class="list-block">
+		<ul>
+			<li>
+				<a href="#" class="item-link item-content">
+					<div class="item-media"><img class="radius-img" src="http://www.xinbaby.com/attached/image/avatar/170_170/1110_1432110374770.jpg" width="44px"></div>
+					<div class="item-inner">
+						<div class="item-title-row"><div class="item-title">素贞哥哥讲故事</div></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="list-block" style="margin-top:0;">
+		<ul>
+			<li><a href="#" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-email-outline"></i></div>
+					<div class="item-inner"><span class="item-title">私信</span><div class="item-after"><span class="badge bg-red">3</span></div></div>
+				</a>
+			</li>
+			<li><a href="#" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-bell-outline"></i></div>
+					<div class="item-inner"><span class="item-title">通知</span><div class="item-after"><span class="badge bg-red">1</span></div></div>
+				</a>
+			</li>
+			<li>
+				<a href="view.html" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-lightbulb-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的提醒</div><div class="item-after"><span class="badge bg-red">5</span></div></div>
+				</a>
+			</li>
+			<li>
+				<a href="view.html" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-undo-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的评论</div><div class="item-after"><span class="badge bg-green">165</span></div></div>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-star-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的收藏</div><div class="item-after"><span class="badge">25</span></div></div>
+				</a>
+			</li>
+			<li><a href="#" class="item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-gear-outline"></i></div>
+					<div class="item-inner"><div class="item-title">系统设置</div></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="toolbar">
+		<div class="toolbar-inner">
+			<a href="#">意见反馈</a>
+			<a href="#">关于心贝</a>
+		</div>
+	</div>
+</aside>
+<div id="main" class="views">
+	<div class="view view-main">
+		<header class="navbar theme-white">
+			<nav class="navbar-inner" data-page="index">
+				<div class="left">
+					<a href="#" data-panel="left" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+				</div>
+				<div id="index_navbar_center" class="center sliding">心贝电台</div>
+				<div class="right">
+					<a href="#" data-popup=".popup-view" class="open-popup link icon-only"><i class="icon ion-ios-compose-outline"></i></a>
+				</div>
+			</nav>
+		</header>
+		<div class="pages navbar-through toolbar-through">
+			<div data-page="index" class="page">
+				<div class="page-content pull-to-refresh-content infinite-scroll">
+					<!-- PullToRefresh-->
+					<div class="pull-to-refresh-layer">
+						<div class="preloader"></div>
+						<div class="pull-to-refresh-arrow"></div>
+					</div>
+					<!-- Swiper -->
+					<div class="swiper-container swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt5.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt2.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt6.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt1.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt3.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+							<div class="swiper-slide"><a href="#"><img data-src="images/ppt4.jpg" class="swiper-lazy"/><div class="preloader"></div></a></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="content-block-title">最新宣言</div>
+					<div class="list-block">
+						<ul>
+							
+							<li><a href="/love/view/4" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">爱你一生一世</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/12" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">打倒日本帝国主义！</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/11" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">1234</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/10" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">换行<br>行</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/9" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">亲爱的老婆
+你是猪
+换行
+行</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/8" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">爱你就像老鼠爱大米</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/7" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">如果眼光在寻找眼光。如果在众多的人群中，第一次相逢的眼光，迸发出吸引的火花。如果时间老人允许这样的眼光，在凝视中互通情意，爱神之树须发芽了。</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/6" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">我直我弯我…
+靠！</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/5" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">狗剩，吃饭了没？</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/3" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">约吗？</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/2" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">你爱我</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+							<li><a href="/love/view/1" class="item-link item-content">
+									<div class="item-media"><i class="icon icon-f7"><img class="radius-img lazy lazy-fadein" data-src="http://www.xinbaby.com/attached/image/avatar/60_60/26_1422846516638.jpg" width="30px"></i></div>
+									<div class="item-inner"><div class="item-title">我爱你</div> <div class="item-after"><span class="badge">5</span></div></div>
+							</a></li>
+							
+						</ul>
+					</div>
+					<div class="content-block-title">分享</div>
+					<div class="content-block">
+						<p><a href="#" class="action-tip button">点击此处分享</a></p>
+					</div>
+					
+					<!-- 加载提示符 -->
+					<div class="infinite-scroll-preloader"><div class="preloader"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Popup -->
+<div class="popup popup-view">
+	<div class="view navbar-fixed">
+		<div class="page">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="left"><a href="#" class="link close-popup">返回</a></div>
+					<div class="center" style="left: 0px;">正在播放</div>
+					<div class="right"><a id="sendWeiboBtn" href="#" class="link"><i class="icon ion-android-send"></i></a></div>
+				</div>
+			</div>
+			<div class="page-content message-content">
+				<audio controls="controls" preload="none"><source src="http://fm.xinbaby.com/attached/media/20150626/1435301739793.mp3" type="audio/mp3"></audio>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="f7/js/framework7.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

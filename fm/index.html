@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>心贝电台</title>
+<link rel="stylesheet" href="fe/fe.min.css?v=2"/>
+<link rel="stylesheet" href="app.css?v=4"/>
+<style type="text/css">
+.statusbar-overlay {
+    background: pink;
+}
+</style>
+</head>
+<body>
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<aside id="pannel-left" class="panel panel-left panel-reveal">
+	<div id="userinfo" class="list-block">
+		<ul>
+			<li><a href="#" class="item-link item-content">
+					<div class="item-media"><img class="radius-img" src="images/user.jpg" width="44px"></div>
+					<div class="item-inner">
+						<div class="item-title-row"><div class="item-title">素贞哥哥讲故事</div></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="list-block" style="margin-top:0;">
+		<ul>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-email-outline"></i></div>
+					<div class="item-inner"><span class="item-title">私信</span><div class="item-after"><span class="badge bg-red">3</span></div></div>
+				</a></li>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-bell-outline"></i></div>
+					<div class="item-inner"><span class="item-title">通知</span><div class="item-after"><span class="badge bg-red">1</span></div></div>
+				</a></li>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-lightbulb-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的提醒</div><div class="item-after"><span class="badge bg-red">5</span></div></div>
+				</a></li>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-undo-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的评论</div><div class="item-after"><span class="badge bg-green">165</span></div></div>
+				</a></li>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-star-outline"></i></div>
+					<div class="item-inner"><div class="item-title">我的收藏</div><div class="item-after"><span class="badge">25</span></div></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="list-block" style="margin-top:0;">
+		<ul>
+			<li><a href="set.html" class="close-panel item-link item-content">
+					<div class="item-media"><i class="icon ion-ios-gear-outline"></i></div>
+					<div class="item-inner"><div class="item-title">系统设置</div></div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="toolbar">
+		<div class="toolbar-inner">
+			<a href="#" data-popup=".yijian" class="open-popup">意见反馈</a> | <a href="#" data-popup=".guanyu" class="open-popup">关于心贝</a>
+		</div>
+	</div>
+</aside>
+<div id="main" class="views">
+	<div class="view view-main">
+		<header class="navbar theme-white">
+			<nav class="navbar-inner" data-page="index">
+				<div class="left">
+					<a href="#" data-panel="left" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+				</div>
+				<div id="index_navbar_center" class="center sliding">心贝电台</div>
+				<div class="right">
+					<a href="view.html" class="link icon-only"><i class="icon ion-ios-pulse"></i></a>
+				</div>
+			</nav>
+		</header>
+		<div class="pages navbar-through toolbar-through">
+			<div data-page="index" class="page">
+				<div class="page-content pull-to-refresh-content infinite-scroll">
+					<!-- PullToRefresh-->
+					<div class="pull-to-refresh-layer">
+						<div class="preloader"></div>
+						<div class="pull-to-refresh-arrow"></div>
+					</div>
+					<!-- albums -->
+					<div class="content-block">
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/1.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/1.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《临时心情存放处》</dd><dd class="album-desc">你有你的情感压力，我有我的育儿问题。酸甜苦辣，人生百态，说给心贝电台听吧。</dd>
+								</dl>
+							</div>
+						</a>
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/2.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/2.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《布丁姐姐讲故事》</dd><dd class="album-desc">布丁姐姐讲故事！</dd>
+								</dl>
+							</div>
+						</a>
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/3.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/3.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《心贝儿歌》</dd><dd class="album-desc">妈妈再也不用发愁叫我起床啦！一起和心贝的快乐乐曲，开启活力早晨吧！</dd>
+								</dl>
+							</div>
+						</a>
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/4.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/4.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《好奇叔叔讲国学》</dd><dd class="album-desc">让孩子们能更加快乐健康的成长，《好奇叔叔讲国学》 寓教于乐、其乐无穷哦！</dd>
+								</dl>
+							</div>
+						</a>
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/5.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/5.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《小刚哥哥绘本故事》</dd><dd class="album-desc">小朋友们，我是你们的小刚哥哥，我会给你们带来很多好听的绘本故事。</dd>
+								</dl>
+							</div>
+						</a>
+						<a class="album" href="list.html">
+							<div class="album-img"><img data-src="images/6.jpg" class="lazy lazy-fadein"/></div>
+							<div class="album-info-bg" style="background-image:url(images/6.jpg);" class="lazy lazy-fadein"></div>
+							<!--<div class="album-info-bg"></div>-->
+							<div class="album-info">
+								<dl>
+									<dt><img data-src="images/user.jpg" class="lazy lazy-fadein"/></dt>
+									<dd class="album-name">《天天听儿歌》</dd><dd class="album-desc">可乐姐姐送给小朋友喜欢的儿歌，希望大家喜欢。</dd>
+								</dl>
+							</div>
+						</a>
+					</div>
+					<!-- 加载提示符 -->
+					<div class="infinite-scroll-preloader"><div class="preloader"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Popup -->
+<div class="popup yijian">
+	<div class="view navbar-fixed">
+		<div class="page">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="left"><a href="#" class="link icon-only close-popup">取消</a></div>
+					<div class="center" style="left: 0px;">意见反馈</div>
+					<div class="right"><a href="#" class="link icon-only close-popup"><i class="icon ion-android-send"></i></a></div>
+				</div>
+			</div>
+			<div class="page-content message-content">
+				<div class="message-input">
+					<textarea id="thread_content" name="thread_content" placeholder="呃...说点什么吧？"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup guanyu">
+	<div class="view navbar-fixed">
+		<div class="page">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="left"><a href="#" class="link icon-only close-popup"><i class="icon ion-ios-close-empty"></i></a></div>
+					<div class="center" style="left: 0px;">关于心贝</div>
+					<div class="right"></div>
+				</div>
+			</div>
+			<div class="page-content message-content">
+				<div class="about-img"><img src="images/icon.png"/></div>
+				<div class="content-block"><p>心贝网育儿网，国内最为专业的育儿门户网站:为准备怀孕、怀孕以及0-6岁的婴幼儿父母提供最权威最全面最实用的育儿知识、育儿产品和早教服务，是科学育儿必选网站！</p><center>心贝电台 1.01</center></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--<audio id="audio" controls="controls" preload="auto" autoplay loop></audio>-->
+<script type="text/javascript" src="fe/fe.min.js?v=2"></script>
+<script type="text/javascript" src="app.js?v=2"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
