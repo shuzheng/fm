@@ -29,7 +29,7 @@ hr{font-size:0;line-height:0;height:1px;background:#ccc;border:none;}
 <body>
 <div id="main">
 	<table id="datagrid" class="datagrid" border="1">
-		<caption><span id="test"></span> 自动投票机器人 <span id="number">300</span></caption>
+		<caption><span id="test"></span> 自动投票机器人 <span id="number">600</span></caption>
 		<thead>
 			<tr style="height:25px"><th width="40px">编号</th><th width="300px">结果</th><th>链接</th><th width="80px">用户</th></tr>
 		</thead>
@@ -641,7 +641,7 @@ $(function() {
 	setInterval(function() {
 		number = parseInt($('#number').text()) - 1;
 		if (number == 0) {
-			//number = 300;
+			//number = 600;
 			//toupiao();
 			location.reload();
 		}
