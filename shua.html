@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+<head>
+<title>自动投票机器人</title>
+<meta charset="utf-8"/>
+<style>
+@charset "utf-8";
+body{font-size:12px;line-height:1.8em;background:#fff;margin:0;/*background:#d9dee2;*/}
+hr{font-size:0;line-height:0;height:1px;background:#ccc;border:none;}
+#main{min-height:650px;overflow:hidden;}
+#main table{width:100%;margin-bottom:50px;clear:both;}
+#main table,#main tr,#main caption{border-collapse:collapse;border:none;}
+#main table{border:1px solid #ddd;}
+#main caption{background:#ededed;font-size:14px;font-weight:bold;padding:10px 20px;border:1px solid #ddd;border-bottom:none;color:#333;}
+#main caption a,#main caption select{margin:0 2px;font-size:12px;}
+#main th,#main td{border:0px solid #ddd;padding:5px 20px;}
+#main thead tr{border-bottom:2px solid #1D9D74;}
+#main thead th{line-height:30px;}
+.datagrid td{text-align:center;}
+#main tbody tr{height:180px;}
+#main tr:nth-child(odd){background:#f9f9f9;}
+#main tr:nth-child(even){background:#fff;}
+#main .fa{font-size:12px;}
+.input{width:100%;/*background:#f5f5f5;*/font-size:12px;border:1px solid #ccc;border-radius:2px;padding:4px;/*box-shadow:inset 0 1px 2px rgba(15,82,135,.25),0 1px 0 rgba(255,255,255,.15);*/margin:0;color:#555;line-height:17px;-webkit-transition-duration:.2s;-webkit-transition-timing-function:ease;}
+.input:focus{background:#fff;outline:none;box-shadow:inset 0 1px 2px rgba(15,82,135,.25),0 0 10px rgba(255,255,255,.8);border:1px solid #999;}
+#number{font-size:14px;font-weight:bold;color:#c00;}
+</style>
+</head>
+<body>
+<div id="main">
+	<table id="datagrid" class="datagrid" border="1">
+		<caption><span id="test"></span> 自动投票机器人 <span id="number">300</span></caption>
+		<thead>
+			<tr style="height:25px"><th width="40px">编号</th><th width="300px">结果</th><th>链接</th><th width="80px">用户</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1js0KOamQ9Vw7dWuqiy2QJto&userAlias=5YiY5bqE"/></td>
+				<td>刘工</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jod5R-KQQxbu515RjAUXra8&userAlias=7oS0IOWHCVMSgeWHCVMSgeaXpeS4iiDuhLQHCD"/></td>
+				<td>张恕征</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jmxVVMA2phHq_puR4q7tn14&userAlias=6Ze35bCP6LaF77yf77yf"/></td>
+				<td>闷小超</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jg-FCqMvn3_XpqxguIYPnBc&userAlias=5puHCVMS56Wl5p6X"/></td>
+				<td>曾祥林</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqz0A7ZIOkWpkb-yVeEm5gc&userAlias=5pyo5pyo5ZOe5ZOe6Le2"/></td>
+				<td>张霖</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jiaw-4XOjpSyiXwSlBwOecU&userAlias=bGF5bmUHCD"/></td>
+				<td>胥蕾</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jiI3XfwfWvmI0vBhMs70Ymc&userAlias=U3RldmVu"/></td>
+				<td>Steven</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jvljX6P079vTZFZ2qU5BEIU&userAlias=6IqxwrfmmZPmmZMHCD"/></td>
+				<td>花·晓晓</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jo_QWySn4a9nFmrG2ZJbdd4&userAlias=Wmxy"/></td>
+				<td>Zlr</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jn7u6sSrD5XTFdfNRuM_OsA&userAlias=5peF6KGM6ICF"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jsk3CZArXF3KqfW564bvEVc&userAlias=572X572X"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jhI4MGot8FXOC6-yQXpKYG4&userAlias=5bHCVMSr6bG85Lu75aSq5Lyf"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jm4VVUXz4n-ef6U4pNfvPx4&userAlias=5bHCVMSD5pyJ5p6X5aSV"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jk0QLZqIvjnkCnZyt9VQL2c&userAlias=6auY5qKT6aao"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jnJqE1uF8aymAwe6EC3r1jU&userAlias=5ZC05paM"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jke5SxTTggOWsK1pfWtBKNI&userAlias=5Yav5pHCVMSQ5Lq6"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqLJgELbgLhwXU18wRdo1sY&userAlias=5bHCVMSr6bG8S2VpdGggUGFu"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jgftEcFXahcadLqftPqHLPY&userAlias=5rOh5rOh"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jgosNtfjHcf1gXxrgENq434&userAlias=546L5rC45bOw"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jv2uxjvJsyFdDqYE_kRei_k&userAlias=5YiY6LHCVMSe"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jtVFoUUqU0e0h5FAxSDbDkc&userAlias=54u86Lev5peg55aG"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jgTxLK4_sI7mpXjwZySqQqY&userAlias=6buE5rSq"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqYvmeiKSopAied33I5ms3k&userAlias=5bHCVMSr6bG85q2m5rGJ5Yqe"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jnBw-P7k_TcPBrAg27ackvw&userAlias=5bCPZQHCDHCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jvzpvqhxLZBVRshR4m7pT_M&userAlias=5bHCVMSr6bG85ouHCVMS6ZHCVMSz5Zmo5buW5piO5a6d"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jo58Q-xm1EZ6FyLMF_QGTck&userAlias=5bHCVMSr6bG85ZCV5pil6LaF"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1ju4vwICxic8glPzArcx0aAs&userAlias=5p2t5bee5bHCVMSr6bG8"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jpPrvWwGJDSCOIWbJsgESbk&userAlias=5Zub54mb"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jnW7d1H6Ly6l8lMosrsY63g&userAlias=546L54eV"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jgRDV52xRjw7DJnJwCY9t0c&userAlias=5b2t6KOV6I2j"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jnBw-P7k_TcPBrAg27ackvw&userAlias=5bCPZQHCDHCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jh78k_hAakrKu489em0C5ag&userAlias=5bCP6YaJ54yr"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1joVx4oQStv5s1tM64k2TLwk&userAlias=5YiY5Lmm6aaZ"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jmRrzr4xaPjqR40c14HIqjY&userAlias=54mb5LHCVMSd5LqR"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jnKGM1ZbrL82E8CiirkdsLo&userAlias=5aec5bu65Yab"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jiaw-4XOjpSyiXwSlBwOecU&userAlias=bGF5bmUHCD"/></td>
+				<td>一剪寒梅</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqFqlep7aem3tKuifeuKX0g&userAlias=5Y2V57qHCWX5p2h55qE576O"/></td>
+				<td>吴亚文</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jn_tRmLWpR4QbxewEB9Z_ZM&userAlias=6YeH5aeR5aiY55qE5bCP6JiR6IHCVMSH77yI5LiD5a6d77yJ"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1ji_WEJrnKMrabWuAnxz6q3U&userAlias=5a625pyJ55Sw5aWz"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jkRw7HE-BHaQmkFrffr9dIM&userAlias=56iL552HCWX"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jmqzihluaLqIqRykesAlhbM&userAlias=5bHCVMSr6bG85bGx5Lic5bGx6KWHCWX5Yqe5LqL5aSEd3Bj"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jiwc2_4AEl3_ytOopVOV8cc&userAlias=6KKB5paw5Yqf"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jhtpQSzrCXmxiIDVFHiSTfI&userAlias=RWxpbmEHCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jkm8NAYVH9Hoq-40axEOlvE&userAlias=YeWHCWXqHCVMSmxvOaLvumfsHCVMSWZqOmCueaYpeS6rgHCDHCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jsrtbJkT9awQXrrae3xknbM&userAlias=6YK15p2HCVMS5rOJ"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jsrtbJkT9awQXrrae3xknbM&userAlias=6YK15p2HCVMS5rOJ"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jkAN6KPBBXjgnNUATgWaEZ0&userAlias=bmFuamluZ3NoYW8HCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqhCfcwYk5zQ4W56QhkJojI&userAlias=IOW9reS6uuWBpQHCDHCD"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jhV7lrx5WV767SDBBoIduNk&userAlias=5bHCVMSr6bG85b6Q5qCR5ZHCVMS5"/></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jqFqlep7aem3tKuifeuKX0g&userAlias=5Y2V57qHCWX5p2h55qE576O"/></td>
+				<td>魏艳芳</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jvMc_1ANrMqpJG7f_NW-VIY&userAlias=SnVsaWEHCD"/></td>
+				<td>姜静</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jvMc_1ANrMqpJG7f_NW-VIY&userAlias=SnVsaWEHCD"/></td>
+				<td>xingxing</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1juhUxSm8wWrymQsbgdqUAfE&userAlias=5bHCVMSr6bG85byg"/></td>
+				<td></td>
+			</tr>
+			<!-- 
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value=""/></td>
+				<td></td>
+			</tr>
+			
+			-->
+		</tbody>
+	</table>
+</div>
+<script src="jquery.js"></script>
+<script>
+$trs = $('tr');
+$(function() {
+	// 增加编号
+	$trs.each(function(i) {
+		$tds = $(this).find('td');
+		$tds.eq(0).text(i);
+	});
+	toupiao();
+	// 倒计时
+	$number = $('#number');
+	setInterval(function() {
+		number = parseInt($('#number').text()) - 1;
+		if (number == 0) {
+			number = 300;
+			toupiao();
+		}
+		$number.text(number);
+	}, 1000);
+});
+// 投票
+function toupiao() {
+	$trs.each(function(i) {
+		$(this).find('td').eq(1).html('');
+	});
+	setTimeout(function() {
+		$trs.each(function(i) {
+			// 循环投票
+			$tds = $(this).find('td');
+			$url = $tds.eq(2).find('input').eq(0).val();
+			var obj = $tds.eq(1);
+			setTimeout(function() {
+				obj.html('<iframe frameborder="0" scrolling="yes" width="100%" height="100px" src="' + $url + '"></iframe>');
+			}, i * Math.floor(Math.random() * 5000));
+		});
+	}, 1000);
+}
+</script>
+</body>
+</html>
