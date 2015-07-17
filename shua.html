@@ -436,6 +436,12 @@ hr{font-size:0;line-height:0;height:1px;background:#ccc;border:none;}
 				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1jsc-yxC7U97vevICTkLvKAc&userAlias=5Lya6aOe55qEIO6UogHCDHCD"/></td>
 				<td></td>
 			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td><input class="input" value="http://vmsmp.info.hc360.com/vms/weixin/weixinUserVoteAction!ajaxWeixinVote.action?param=5396312,5012583,7,5007285,574&openid=os4K1joqZK8cHEblETr3XKepuUQQ&userAlias=RmFuIFlhbmcHCD"/></td>
+				<td></td>
+			</tr>
 			<!-- 
 			<tr>
 				<td></td>
@@ -463,8 +469,9 @@ $(function() {
 	setInterval(function() {
 		number = parseInt($('#number').text()) - 1;
 		if (number == 0) {
-			number = 300;
-			toupiao();
+			//number = 300;
+			//toupiao();
+			location.reload();
 		}
 		$number.text(number);
 	}, 1000);
