@@ -797,6 +797,7 @@ function toupiao() {
 // 重新计时
 function retimer() {
 	$number = $('#number');
+	clearInterval(timer);
 	timer = setInterval(function() {
 		number = parseInt($('#number').text()) - 1;
 		if (number == 0) {
