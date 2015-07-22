@@ -783,7 +783,7 @@ function toupiao() {
 			$url = $tds.eq(2).find('input').eq(0).val();
 			var obj = $tds.eq(1);
 			//setTimeout(function() {
-				obj.html('<a class="button button-green" href="' + $url + '">点击投票' + i + '</a>');
+				obj.html('<a class="button button-green" href="' + $url + '&v=1">点击投票' + i + '</a>');
 			//}, i * Math.floor(Math.random() * 5000));
 		});
 	//}, 1000);
