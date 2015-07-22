@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title>投票机</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+</head>
+<body>
+<div style="text-align:center;">倒计时：<span id="number">300</span></div>
+<script src="jquery.js"></script>
+<script>
+$(function() {
+  // 倒计时
+	$number = $('#number');
+	var timer = setInterval(function() {
+		number = parseInt($('#number').text()) - 1;
+		if (number == 0) {
+			//number = 600;
+			//toupiao();
+			location.reload();
+			clearInterval(timer);
+      if (window.webkitNotifications) {
+        if (window.webkitNotifications.checkPermission() == 0) {
+      		var n = window.webkitNotifications.createNotification("../../img/logo_s.gif", '投票提醒', '该投票了！');
+      		n.show();
+      	}else{
+      		window.webkitNotifications.requestPermission();
+      	}
+      }
+		}
+		$number.text(number);
+	}, 1000);
+});
+</script>
+</body>
+</html>
