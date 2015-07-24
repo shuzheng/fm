@@ -791,6 +791,7 @@ function toupiao() {
 			//setTimeout(function() {
 				obj.html('<a class="button button-green" href="' + $url + '&v=3">点击投票' + i + '</a>');
 				console.log('list.add("' + $url + '");');
+				$('#test').html($('#test').html() + '<br/>list.add("' + $url + '");');
 			//}, i * Math.floor(Math.random() * 5000));
 		});
 	//}, 1000);
