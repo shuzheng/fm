@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>投票机</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+<style>
+body{font-size:12px;padding:0;margin:0;}
+#list{padding:5px;}
+.fixed{width:100%;height:30px;line-height:30px;text-align:center;background:#49C29B;color:#fff;position:fixed;bottom:0;z-index:1;}
+.fixed a{padding:0 10px;}
+</style>
+</head>
+<body>
+<div id="list">
+
+</div>
+<div class="fixed">当前票数：<span id="number">--</span> <a id="retimer" href="javascript:;" onclick="retimer();">重新开始</a></div>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	$number = $('#number');
+	$list = $('#list');	// 结果列表
+	count = 111;		// 投票列表总数
+	speed = 5000;		// 投票速度
+	index = 0;			// 投票下标
+    timer = setInterval(function() {
+	    $.ajax({
+	         url: 'http://qinzi.xinbaby.com/toupiao?index=' + index,
+	         dataType: 'jsonp',
+	         jsonp: 'jsonpcallback',
+	         success: function(data) {
+	            $number.text(data.number);
+	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.result + '</p>');
+	         },
+	         error: function() {
+	         	$list.prepend('<p>连接超时!</p>');
+	         }
+	    });
+	    // 循环index
+	    index ++;
+	    if (index == count) {
+	    	index = 0;
+	    }
+    }, speed);
+    $('#retimer').click(function() {
+    	index = 0;
+    });
+});
+</script>
+</body>
+</html>
