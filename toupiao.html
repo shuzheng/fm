@@ -18,7 +18,7 @@ body{font-size:12px;padding:0;margin:0;}
 <div id="list">
 
 </div>
-<div class="fixed">当前票数：<span id="number">--</span>｜编号(共:111个)：<input id="index" value="0"/>｜<a id="button" href="javascript:;">开始</a></div>
+<div class="fixed">当前票数：<span id="number">--</span>｜编号(共:<span id="count">--</span>个)：<input id="index" value="0"/>｜<a id="button" href="javascript:;">开始</a></div>
 <script src="jquery.js"></script>
 <script>
 $(document).ready(function(){
@@ -30,9 +30,10 @@ $(document).ready(function(){
     	$(this).text('开始');
     });
 });
+$count = $('#count');
 $number = $('#number');
 $list = $('#list');	// 结果列表
-count = 111;		// 投票列表总数
+count = 100;		// 投票列表总数
 speed = 1000;		// 投票速度
 // 开始投票
 function toupiao() {
@@ -42,7 +43,9 @@ function toupiao() {
 	         dataType: 'jsonp',
 	         jsonp: 'jsonpcallback',
 	         success: function(data) {
+	         	count = parseInt(data.count);
 	            $number.text(data.number);
+	            $count.text(data.count);
 	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.result + '</p>');
 	         },
 	         error: function() {
