@@ -10,13 +10,15 @@ body{font-size:12px;padding:0;margin:0;}
 .fixed{width:100%;height:30px;line-height:30px;text-align:center;background:#49C29B;color:#fff;position:fixed;bottom:0;z-index:1;}
 .fixed a{padding:0 10px;}
 #retimer{display:none;}
+#index{width:30px;}
+#number{color:#c00;}
 </style>
 </head>
 <body>
 <div id="list">
 
 </div>
-<div class="fixed">当前票数：<span id="number">--</span> <a id="button" href="javascript:;">开始</a></div>
+<div class="fixed">当前票数：<span id="number">--</span>｜编号(共:111个)：<input id="index" value="0"/>｜<a id="button" href="javascript:;">开始</a></div>
 <script src="jquery.js"></script>
 <script>
 $(document).ready(function(){
@@ -32,12 +34,11 @@ $number = $('#number');
 $list = $('#list');	// 结果列表
 count = 111;		// 投票列表总数
 speed = 2500;		// 投票速度
-index = 0;			// 投票下标
 // 开始投票
 function toupiao() {
 	timer = setInterval(function() {
 	    $.ajax({
-	         url: 'http://qinzi.xinbaby.com/toupiao?index=' + index,
+	         url: 'http://qinzi.xinbaby.com/toupiao?index=' + $('#index').val(),
 	         dataType: 'jsonp',
 	         jsonp: 'jsonpcallback',
 	         success: function(data) {
@@ -49,9 +50,11 @@ function toupiao() {
 	         }
 	    });
 	    // 循环index
-	    index ++;
+	    var index = parseInt($('#index').val()) + 1;
 	    if (index == count) {
-	    	index = 0;
+	    	$('#index').val('0');
+	    } else {
+	    	$('#index').val(index);
 	    }
     }, speed);
 }
