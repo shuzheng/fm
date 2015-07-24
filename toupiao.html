@@ -68,7 +68,7 @@ function toupiao() {
 	         	count = parseInt(data.count);
 	            $number.text(data.number);
 	            $count.text(data.count);
-	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.result + '</p>');
+	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.data + '</p>');
 	            // 通知
 	            if (data.result == 'success') {
 		            new Notification(
