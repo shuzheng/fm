@@ -7,7 +7,7 @@
 <style>
 body{font-size:12px;padding:0;margin:0;}
 #list{padding:5px;}
-.fixed{width:100%;height:30px;line-height:30px;text-align:center;background:#49C29B;color:#fff;position:fixed;bottom:0;z-index:1;}
+.fixed{width:100%;height:40px;line-height:40px;text-align:center;background:#49C29B;color:#fff;position:fixed;bottom:0;z-index:1;}
 .fixed a{padding:0 10px;}
 #retimer{display:none;}
 #index{width:30px;}
@@ -22,6 +22,28 @@ body{font-size:12px;padding:0;margin:0;}
 <script src="jquery.js"></script>
 <script>
 $(document).ready(function(){
+	// 授权通知
+	$('#button').one('click', function() {
+		// Let's check if the browser supports notifications
+		if (!('Notification' in window)) {
+			console.log("This browser does not support desktop notification");
+		}
+		// Let's check whether notification permissions have alredy been granted
+		else if (Notification.permission === 'granted') {
+			// If it's okay let's create a notification
+			
+		}
+		// Otherwise, we need to ask the user for permission
+		else if (Notification.permission !== 'denied') {
+			Notification.requestPermission(function(permission) {
+				// If the user accepts, let's create a notification
+				if (permission === 'granted') {
+					
+				}
+			});
+		}
+	});
+	// 状态切换
     $('#button').toggle(function() {
     	toupiao();
     	$(this).text('暂停');
@@ -47,6 +69,13 @@ function toupiao() {
 	            $number.text(data.number);
 	            $count.text(data.count);
 	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.result + '</p>');
+	            // 通知
+	            new Notification(
+					'投票成功', {
+						icon: 'http://m.xinbaby.com/m/images/light_icon2.png',
+						body: '当前总票数：' + data.number
+					}
+				);
 	         },
 	         error: function() {
 	         	$list.prepend('<p>连接超时!</p>');
