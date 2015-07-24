@@ -70,12 +70,14 @@ function toupiao() {
 	            $count.text(data.count);
 	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.result + '</p>');
 	            // 通知
-	            new Notification(
-					'投票成功', {
-						icon: 'http://m.xinbaby.com/m/images/light_icon2.png',
-						body: '当前总票数：' + data.number
-					}
-				);
+	            if (data.result == 'success') {
+		            new Notification(
+						'投票成功', {
+							icon: 'http://m.xinbaby.com/m/images/light_icon2.png',
+							body: '当前总票数：' + data.number
+						}
+					);
+				}
 	         },
 	         error: function() {
 	         	$list.prepend('<p>连接超时!</p>');
