@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<title>投票机</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+<style>
+body{font-size:12px;padding:0;margin:0;}
+#list{padding:5px;}
+.fixed{width:100%;height:40px;line-height:40px;text-align:center;background:#49C29B;color:#fff;position:fixed;bottom:0;z-index:1;}
+.fixed a{padding:0 10px;}
+#retimer{display:none;}
+#index{width:30px;}
+#number{color:#c00;}
+</style>
+</head>
+<body>
+<div id="list">
+
+</div>
+<div class="fixed"><span id="timer">310</span>｜当前票数：<span id="number">--</span>｜编号(共:<span id="count">--</span>个)：<input id="index" value="0"/>｜<a id="button" href="javascript:;">开始</a></div>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	// 授权通知
+	$('#button').one('click', function() {
+		// Let's check if the browser supports notifications
+		if (!('Notification' in window)) {
+			console.log("This browser does not support desktop notification");
+		}
+		// Let's check whether notification permissions have alredy been granted
+		else if (Notification.permission === 'granted') {
+			// If it's okay let's create a notification
+			
+		}
+		// Otherwise, we need to ask the user for permission
+		else if (Notification.permission !== 'denied') {
+			Notification.requestPermission(function(permission) {
+				// If the user accepts, let's create a notification
+				if (permission === 'granted') {
+					
+				}
+			});
+		}
+	});
+	// 状态切换
+    $('#button').toggle(function() {
+    	toupiao();
+    	$(this).text('暂停');
+    }, function() {
+    	clearInterval(timer);
+    	$(this).text('开始');
+    });
+    toupiao();
+});
+$count = $('#count');
+$number = $('#number');
+$list = $('#list');	// 结果列表
+count = 100;		// 投票列表总数
+speed = 310 * 1000;		// 投票速度
+// 开始投票
+function toupiao() {
+	timer = setInterval(function() {
+	    $.ajax({
+	         url: 'http://qinzi.xinbaby.com/toupiao?index=' + $('#index').val(),
+	         dataType: 'jsonp',
+	         jsonp: 'jsonpcallback',
+	         success: function(data) {
+	         	count = parseInt(data.count);
+	            $number.text(data.number);
+	            $count.text(data.count);
+	            $list.prepend('<p>' + data.index + ':[' + data.time + '] ' + data.data + '</p>');
+	            // 通知
+	            if (data.result == 'success') {
+		            new Notification(
+						'投票成功', {
+							icon: 'http://m.xinbaby.com/m/images/light_icon2.png',
+							body: '当前总票数：' + data.number
+						}
+					);
+					clearInterval(timer);
+					setTimeout(function() {
+						toupiao();
+					}, speed);
+				}
+	         },
+	         error: function() {
+	         	$list.prepend('<p>连接超时!</p>');
+	         }
+	    });
+	    // 循环index
+	    var index = parseInt($('#index').val()) + 1;
+	    if (index == count) {
+	    	$('#index').val('0');
+	    } else {
+	    	$('#index').val(index);
+	    }
+    }, speed);
+}
+</script>
+</body>
+</html>
