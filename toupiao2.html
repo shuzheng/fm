@@ -77,10 +77,6 @@ function toupiao() {
 							body: '当前总票数：' + data.number
 						}
 					);
-					clearInterval(timer);
-					setTimeout(function() {
-						toupiao();
-					}, speed);
 				}
 	         },
 	         error: function() {
