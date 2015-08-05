@@ -1,4 +1,5 @@
-#电台fm
-基于framework7的spa电台webapp
-<h2>演示地址</h2>
-<a href="http://shuzheng.github.io/fm/">shuzheng.github.io/fm/</a>
+#FM webapp
+A webapp of the FM building based on framework7
+
+## 演示地址
+[http://shuzheng.github.io/fm/](http://shuzheng.github.io/fm/)
