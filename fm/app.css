@@ -86,7 +86,7 @@
 .subnavbar{background:#392F64;margin-top:1px;}
 .subnavbar:after{background:none;}
 .list-block ul{background:none;}
-.media-list .item-title{color:#fff;}
+.media-list .item-title{color:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 #tab2 .list-block ul:before,#tab2 .list-block ul:after,#tab2 .list-block .item-inner:after{
   background:#34216A;
 }
